@@ -1,0 +1,106 @@
+{
+	"id": "0d192aa9-a72f-432b-9ce4-89e6cb965f72",
+	"name": "GoRestApi",
+	"timestamp": "2023-05-16T03:56:06.456Z",
+	"collection_id": "0-1fc9874d-1398-40b4-84d8-407528f3ae27",
+	"folder_id": 0,
+	"environment_id": "3634b47a-2864-4375-aeaf-da568f645a21",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9ea571d0-13be-4e30-bc8f-d0a898306146",
+			"name": "PostReq",
+			"url": "https://gorest.co.in/public/v2/users",
+			"time": 901,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				901
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "af9a7b97-cde9-47dd-a6a5-6b6841533518",
+			"name": "GetReq",
+			"url": "https://gorest.co.in//public/v2/users/1725422",
+			"time": 264,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				264
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4906a519-1802-464f-b003-de30f69bd4a9",
+			"name": "UpdateReq",
+			"url": "https://gorest.co.in//public/v2/users/1725422",
+			"time": 203,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				203
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "732851c3-7054-4f2c-a886-e859e844ecc0",
+			"name": "DeleteReq",
+			"url": "https://gorest.co.in//public/v2/users/1725422",
+			"time": 218,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				218
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1586,
+	"collection": {
+		"requests": [
+			{
+				"id": "9ea571d0-13be-4e30-bc8f-d0a898306146",
+				"method": "POST"
+			},
+			{
+				"id": "af9a7b97-cde9-47dd-a6a5-6b6841533518",
+				"method": "GET"
+			},
+			{
+				"id": "4906a519-1802-464f-b003-de30f69bd4a9",
+				"method": "PUT"
+			},
+			{
+				"id": "732851c3-7054-4f2c-a886-e859e844ecc0",
+				"method": "DELETE"
+			}
+		]
+	}
+}

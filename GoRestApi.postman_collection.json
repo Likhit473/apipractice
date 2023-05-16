@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "1fc9874d-1398-40b4-84d8-407528f3ae27",
+		"name": "GoRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostReq",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var username= pm.variables.replaceIn('{{$randomBsNoun}}')\r",
+							"\r",
+							"var useremail= \"lik\"+username+\"@gmail.com\";\r",
+							"\r",
+							"console.log(useremail);\r",
+							"\r",
+							"pm.environment.set(\"email_col\",useremail);\r",
+							"pm.environment.set(\"ename_col\",username);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonbody = JSON.parse(responseBody);\r",
+							"var userid=jsonbody.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"userid\",userid)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"{{ename_col}}\",\r\n    \"gender\":\"male\",\r\n    \"email\":\"{{email_col}}\",\r\n    \"status\":\"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}public/v2/users",
+					"host": [
+						"{{Url}}public"
+					],
+					"path": [
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReq",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}/public/v2/users/{{userid}}",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"{{userid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateReq",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var username= pm.variables.replaceIn('{{$randomBsNoun}}')\r",
+							"\r",
+							"var useremail= \"lik\"+username+\"@gmail.com\";\r",
+							"\r",
+							"console.log(useremail);\r",
+							"\r",
+							"pm.environment.set(\"email_col\",useremail);\r",
+							"pm.environment.set(\"ename_col\",username);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"{{ename_col}}\",\r\n    \"gender\":\"male\",\r\n    \"email\":\"{{email_col}}\",\r\n    \"status\":\"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}/public/v2/users/{{userid}}",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"{{userid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteReq",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.unset('email_col')\r",
+							"pm.environment.unset('ename_col')\r",
+							"pm.collectionVariables.unset('userid')"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}/public/v2/users/{{userid}}",
+					"host": [
+						"{{Url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"{{userid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "51367de4d87b2e7dc46246872f208b916d3a456a435a61e036b58b872d28c67c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Url",
+			"value": "https://gorest.co.in/",
+			"type": "default"
+		},
+		{
+			"key": "email_col",
+			"value": ""
+		},
+		{
+			"key": "ename_col",
+			"value": ""
+		}
+	]
+}

@@ -1,0 +1,12 @@
+GoRest API:
+
+Url:https://gorest.co.in/
+
+endpoints
+post: /public/v2/users
+get:  /public/v2/users/1051
+put/patch: /public/v2/users/1051
+Delete: /public/v2/users/1051
+Access Token:51367de4d87b2e7dc46246872f208b916d3a456a435a61e036b58b872d28c67c
+
+'{"name":"Tenali Ramakrishna", "gender":"male", "email":"tenali.ramakrishna@15ce.com", "status":"active"}'
