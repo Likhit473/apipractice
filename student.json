@@ -1,0 +1,67 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "hari",
+      "location": "US",
+      "phonenumber": "1234123412",
+      "courses": [
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "venu",
+      "location": "India",
+      "phonenumber": "123111111",
+      "courses": [
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "name": "naveen",
+      "location": "am",
+      "phonenumber": "100",
+      "courses": [
+        "Java",
+        "SQL"
+      ],
+      "id": 4
+    },
+    {
+      "name": "naveen",
+      "location": "am",
+      "phonenumber": "100",
+      "courses": [
+        "Java",
+        "SQL"
+      ],
+      "id": 5
+    },
+    {
+      "name": "naveen",
+      "location": "am",
+      "phonenumber": "100",
+      "courses": [
+        "Java",
+        "SQL"
+      ],
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "name": "naveen",
+      "location": "am",
+      "phonenumber": "100",
+      "courses": [
+        "Java",
+        "SQL"
+      ],
+      "id": 8
+    }
+  ]
+}
